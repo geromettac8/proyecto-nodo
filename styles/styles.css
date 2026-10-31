@@ -1,0 +1,68 @@
+
+/* ==================================
+   NODO - ESTILOS GENERALES
+================================== */
+
+/* Paleta de colores */
+:root {
+    --color-principal: #17191E;
+    --color-secundario: #F5F6F8;
+    --color-acento: #377DFF;
+    --color-gris: #9299A5;
+}
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo de la página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    line-height: 1.6;
+}
+
+/* Títulos */
+.titulo-principal  {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.titulo-secundario {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Párrafos */
+.texto-general{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    padding: 20px 40px;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+}
+/* ENLACES DEL MENÚ */
+
+.menu a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: 500;
+}
