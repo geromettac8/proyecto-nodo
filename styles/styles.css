@@ -28,7 +28,7 @@ body {
 
 /* Títulos */
 .titulo-principal  {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
 }
 
@@ -46,6 +46,8 @@ body {
 /* ENCABEZADO */
 
 .encabezado {
+    flex-direction: column;
+gap: 15px;
     background-color: var(--color-principal);
     color: var(--color-secundario);
     padding: 20px 40px;
@@ -58,6 +60,8 @@ body {
 /* MENÚ DE NAVEGACIÓN */
 
 .menu ul {
+    flex-wrap: wrap;
+justify-content: center;
     list-style: none;
     display: flex;
     gap: 25px;
@@ -84,7 +88,61 @@ main section {
     flex-direction: column;
     gap: 15px;
 }
+/* IMAGEN RESPONSIVE DE NODO */
+/* TARJETA DE IDENTIDAD NODO */
+
+figure {
+    background-color: #17191E;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+}
+figure img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
 /* PIE DE PÁGINA */
 footer {
     padding: 20px 40px;
+}
+/* GRID DE PROYECTOS - MOBILE FIRST */
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "interaccion"
+        "ventas";
+    gap: 20px;
+}
+
+.grid-proyectos article:first-child {
+    grid-area: interaccion;
+}
+
+.grid-proyectos article:last-child {
+    grid-area: ventas;
+}
+/* DISEÑO PARA COMPUTADORAS */
+@media (min-width: 1024px) {
+
+    .encabezado {
+        flex-direction: row;
+    }
+
+    .menu ul {
+        flex-wrap: nowrap;
+    }
+.grid-proyectos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "interaccion ventas";
+}
+.titulo-principal {
+    font-size: 36px;
+}
 }
