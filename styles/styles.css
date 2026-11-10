@@ -49,6 +49,10 @@ body {
     background-color: var(--color-principal);
     color: var(--color-secundario);
     padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* MENÚ DE NAVEGACIÓN */
@@ -57,7 +61,7 @@ body {
     list-style: none;
     display: flex;
     gap: 25px;
-    margin-top: 15px;
+    align-items: center;
 }
 /* ENLACES DEL MENÚ */
 
@@ -65,4 +69,22 @@ body {
     color: var(--color-secundario);
     text-decoration: none;
     font-weight: 500;
+}
+/* ESPACIADO DE SECCIONES */
+
+main {
+    padding: 20px;
+}
+
+main section {
+    margin-bottom: 10px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/* PIE DE PÁGINA */
+footer {
+    padding: 20px 40px;
 }
