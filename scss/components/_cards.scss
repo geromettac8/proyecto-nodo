@@ -1,0 +1,61 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Tarjeta de identidad NODO
+figure {
+    background-color: $color-principal;
+    padding: $espaciado-card;
+    border-radius: $radio-imagen;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+        @include imagen-responsive;
+        max-width: 400px;
+    }
+}
+
+// Grid de proyectos
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "interaccion"
+        "ventas";
+    gap: $espaciado-general;
+
+    article {
+        background-color: $color-blanco;
+        padding: $espaciado-card;
+        border-radius: $radio-card;
+        box-shadow: $sombra-card;
+        transition: transform $duracion-transicion ease,
+                    box-shadow $duracion-transicion ease,
+                    background-color $duracion-transicion ease;
+
+        &:first-child {
+            grid-area: interaccion;
+        }
+
+        &:last-child {
+            grid-area: ventas;
+        }
+
+        &:hover {
+            background-color: $color-card-hover;
+            transform: translateY(-5px);
+            box-shadow: $sombra-hover;
+        }
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "interaccion ventas";
+    }
+
+    @include desktop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "interaccion ventas";
+    }
+}

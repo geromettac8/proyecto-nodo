@@ -1,0 +1,24 @@
+@use "../utilities/variables" as *;
+
+// Controles interactivos del carousel
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.7;
+    transition: opacity $duracion-transicion ease,
+                background-color $duracion-transicion ease;
+
+    &:hover {
+        opacity: 1;
+        background-color: rgba($color-card-hover, 0.15);
+    }
+
+    &:focus-visible {
+        opacity: 1;
+        outline: 3px solid $color-card-hover;
+        outline-offset: -3px;
+    }
+
+    &:active {
+        background-color: rgba($color-card-hover, 0.3);
+    }
+}
