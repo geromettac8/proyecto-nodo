@@ -8,7 +8,7 @@ footer {
         color: $color-footer-enlace;
         text-decoration: none;
         transition: color $duracion-transicion ease,
-                    text-decoration-color $duracion-transicion ease;
+            text-decoration-color $duracion-transicion ease;
 
         &:hover {
             color: $color-footer-hover;

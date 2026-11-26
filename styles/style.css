@@ -22,6 +22,18 @@ main section {
   gap: 15px;
 }
 
+@media (max-width: 767px) {
+  main {
+    padding: 15px;
+  }
+  main section {
+    padding: 15px;
+    gap: 12px;
+  }
+  footer {
+    padding: 15px 20px;
+  }
+}
 .titulo-principal {
   font-size: 28px;
   font-weight: 700;

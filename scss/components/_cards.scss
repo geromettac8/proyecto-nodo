@@ -31,8 +31,8 @@ figure {
         border-radius: $radio-card;
         box-shadow: $sombra-card;
         transition: transform $duracion-transicion ease,
-                    box-shadow $duracion-transicion ease,
-                    background-color $duracion-transicion ease;
+            box-shadow $duracion-transicion ease,
+            background-color $duracion-transicion ease;
 
         &:first-child {
             grid-area: interaccion;

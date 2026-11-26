@@ -27,3 +27,19 @@ main {
         @include flex-column;
     }
 }
+
+// Ajustes para dispositivos móviles
+@media (max-width: ($tablet - 1px)) {
+    main {
+        padding: 15px;
+
+        section {
+            padding: 15px;
+            gap: 12px;
+        }
+    }
+
+    footer {
+        padding: 15px 20px;
+    }
+}
