@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+// Diseño adaptable para tablets
+@mixin tablet {
+    @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+        @content;
+    }
+}
+
+// Diseño adaptable para computadoras
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+// Organización de elementos con Flexbox
+@mixin flex-column($gap: 15px) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+// Imágenes adaptables
+@mixin imagen-responsive {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}

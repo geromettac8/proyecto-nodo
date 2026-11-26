@@ -1,0 +1,13 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Encabezado
+.encabezado {
+    background-color: $color-principal;
+    color: $color-secundario;
+    padding: 10px $espaciado-general;
+
+    @include desktop {
+        flex-direction: row;
+    }
+}

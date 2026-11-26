@@ -1,0 +1,39 @@
+
+// Paleta de colores NODO
+$color-principal: #17191E;
+$color-secundario: #F5F6F8;
+$color-acento: #377DFF;
+$color-gris: #9299A5;
+$color-blanco: #ffffff;
+
+// Colores interactivos
+$color-nav-hover: #8bb8ff;
+$color-nav-active: #5c94e8;
+$color-footer-enlace: #438fc4;
+$color-footer-hover: #38b6ff;
+$color-footer-active: #216a9e;
+$color-card-hover: #D6EFFF;
+
+// Tipografía
+$fuente-principal: 'Poppins', sans-serif;
+$tamano-titulo: 28px;
+$tamano-texto: 16px;
+
+// Espaciados
+$espaciado-general: 20px;
+$espaciado-card: 25px;
+
+// Bordes
+$radio-card: 15px;
+$radio-imagen: 20px;
+
+// Sombras
+$sombra-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+$sombra-hover: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+// Transiciones
+$duracion-transicion: 0.3s;
+
+// Breakpoints responsive
+$tablet: 768px;
+$desktop: 1024px;

@@ -1,0 +1,29 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Configuración general
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Cuerpo de la página
+body {
+    font-family: $fuente-principal;
+    background-color: $color-secundario;
+    color: $color-principal;
+    line-height: 1.6;
+}
+
+// Espaciado de secciones
+main {
+    padding: $espaciado-general;
+
+    section {
+        margin-bottom: 10px;
+        padding: $espaciado-general;
+
+        @include flex-column;
+    }
+}

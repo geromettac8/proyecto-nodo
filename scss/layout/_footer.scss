@@ -1,0 +1,29 @@
+@use "../utilities/variables" as *;
+
+// Pie de página
+footer {
+    padding: $espaciado-general 40px;
+
+    a {
+        color: $color-footer-enlace;
+        text-decoration: none;
+        transition: color $duracion-transicion ease,
+                    text-decoration-color $duracion-transicion ease;
+
+        &:hover {
+            color: $color-footer-hover;
+            text-decoration: underline;
+        }
+
+        &:focus-visible {
+            color: $color-footer-hover;
+            outline: 2px solid $color-footer-hover;
+            outline-offset: 4px;
+            border-radius: 3px;
+        }
+
+        &:active {
+            color: $color-footer-active;
+        }
+    }
+}
