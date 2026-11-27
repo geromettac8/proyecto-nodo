@@ -3,27 +3,47 @@
 
 // Navegación Bootstrap
 .encabezado {
-    .navbar {
-        width: 100%;
-    }
+   .navbar {
+    width: 100%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
 
     .navbar-brand {
         color: $color-blanco;
         font-size: 24px;
+        font-weight: 700;
+
+        &:hover,
+        &:focus {
+            color: $color-acento;
+        }
     }
 
     .nav-link {
         color: $color-blanco;
-        transition: color $duracion-transicion ease;
+        transition: color $duracion-transicion ease,
+            text-shadow $duracion-transicion ease;
 
         &:hover,
         &:focus {
             color: $color-nav-hover;
+            text-shadow: 0 0 10px $color-acento;
         }
 
-        &:active {
+        &:active,
+        &.active {
             color: $color-nav-active;
         }
+    }
+
+    .navbar-toggler {
+        border-color: $color-borde-card;
+    }
+
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
     }
 }
 
@@ -43,7 +63,7 @@
     }
 
     a {
-        color: $color-secundario;
+        color: $color-blanco;
         text-decoration: none;
         font-weight: 500;
     }

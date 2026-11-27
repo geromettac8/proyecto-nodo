@@ -1,9 +1,14 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 
+// Estilo compartido de títulos
+%titulo-base {
+    font-size: $tamano-titulo;
+}
+
 // Título principal
 .titulo-principal {
-    font-size: $tamano-titulo;
+    @extend %titulo-base;
     font-weight: 700;
 
     @include tablet {
@@ -17,7 +22,7 @@
 
 // Título secundario
 .titulo-secundario {
-    font-size: $tamano-titulo;
+    @extend %titulo-base;
     font-weight: 600;
 }
 

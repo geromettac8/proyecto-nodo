@@ -6,12 +6,19 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #F5F6F8;
-  color: #17191E;
+  background-color: #080f1b;
+  background-image: radial-gradient(ellipse at top left, rgba(36, 137, 237, 0.28), transparent 45%), radial-gradient(ellipse at bottom right, rgba(0, 119, 255, 0.18), transparent 40%), linear-gradient(135deg, #142b46, #0e1929, #080f1b);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #f3f8ff;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
+  flex: 1;
   padding: 20px;
 }
 main section {
@@ -34,8 +41,11 @@ main section {
     padding: 15px 20px;
   }
 }
-.titulo-principal {
+.titulo-secundario, .titulo-principal {
   font-size: 28px;
+}
+
+.titulo-principal {
   font-weight: 700;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -50,7 +60,6 @@ main section {
 }
 
 .titulo-secundario {
-  font-size: 28px;
   font-weight: 600;
 }
 
@@ -60,9 +69,10 @@ main section {
 }
 
 .encabezado {
-  background-color: #17191E;
-  color: #F5F6F8;
+  background-color: transparent;
+  color: #F3F8FF;
   padding: 10px 20px;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
 }
 @media (min-width: 1024px) {
   .encabezado {
@@ -72,20 +82,34 @@ main section {
 
 .encabezado .navbar {
   width: 100%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 .encabezado .navbar-brand {
-  color: #ffffff;
+  color: #F3F8FF;
   font-size: 24px;
+  font-weight: 700;
+}
+.encabezado .navbar-brand:hover, .encabezado .navbar-brand:focus {
+  color: #38BDF8;
 }
 .encabezado .nav-link {
-  color: #ffffff;
-  transition: color 0.3s ease;
+  color: #F3F8FF;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 .encabezado .nav-link:hover, .encabezado .nav-link:focus {
-  color: #8bb8ff;
+  color: #38BDF8;
+  text-shadow: 0 0 10px #38BDF8;
 }
-.encabezado .nav-link:active {
-  color: #5c94e8;
+.encabezado .nav-link:active, .encabezado .nav-link.active {
+  color: #60A5FA;
+}
+.encabezado .navbar-toggler {
+  border-color: rgba(56, 189, 248, 0.35);
+}
+.encabezado .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
 }
 
 .menu ul {
@@ -102,35 +126,41 @@ main section {
   }
 }
 .menu a {
-  color: #F5F6F8;
+  color: #F3F8FF;
   text-decoration: none;
   font-weight: 500;
 }
 
 footer {
   padding: 20px 40px;
+  background-color: transparent;
+  border-top: 1px solid rgba(56, 189, 248, 0.2);
+  color: #B8C9DD;
+  text-align: center;
+  font-size: 14px;
 }
 footer a {
-  color: #438fc4;
+  color: #7DD3FC;
   text-decoration: none;
-  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 footer a:hover {
-  color: #38b6ff;
+  color: #38BDF8;
+  text-shadow: 0 0 12px #38BDF8;
   text-decoration: underline;
 }
 footer a:focus-visible {
-  color: #38b6ff;
-  outline: 2px solid #38b6ff;
+  color: #38BDF8;
+  outline: 2px solid #38BDF8;
   outline-offset: 4px;
   border-radius: 3px;
 }
 footer a:active {
-  color: #216a9e;
+  color: #60A5FA;
 }
 
 figure {
-  background-color: #17191E;
+  background-color: #0B1422;
   padding: 25px;
   border-radius: 20px;
   max-width: 450px;
@@ -152,10 +182,13 @@ figure img {
   gap: 20px;
 }
 .grid-proyectos article {
-  background-color: #ffffff;
+  background-color: rgba(20, 43, 70, 0.85);
+  color: #F3F8FF;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  backdrop-filter: blur(12px);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25), 0 0 15px rgba(56, 189, 248, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .grid-proyectos article:first-child {
@@ -165,7 +198,7 @@ figure img {
   grid-area: ventas;
 }
 .grid-proyectos article:hover {
-  background-color: #D6EFFF;
+  background-color: #1C3B5C;
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
@@ -185,20 +218,23 @@ figure img {
 .carousel-control-prev,
 .carousel-control-next {
   opacity: 0.7;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   opacity: 1;
-  background-color: rgba(214, 239, 255, 0.15);
+  background-color: rgba(28, 59, 92, 0.15);
+  transform: scale(1.03);
 }
 .carousel-control-prev:focus-visible,
 .carousel-control-next:focus-visible {
   opacity: 1;
-  outline: 3px solid #D6EFFF;
+  outline: 3px solid #1C3B5C;
   outline-offset: -3px;
 }
 .carousel-control-prev:active,
 .carousel-control-next:active {
-  background-color: rgba(214, 239, 255, 0.3);
+  background-color: rgba(28, 59, 92, 0.3);
 }
+
+/*# sourceMappingURL=style.css.map */

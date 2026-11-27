@@ -26,10 +26,14 @@ figure {
     gap: $espaciado-general;
 
     article {
-        background-color: $color-blanco;
+        background-color: rgba($color-card, 0.85);
+        color: $color-blanco;
+        border: 1px solid $color-borde-card;
+        backdrop-filter: blur(12px);
         padding: $espaciado-card;
         border-radius: $radio-card;
-        box-shadow: $sombra-card;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25),
+            0 0 15px rgba(56, 189, 248, 0.12);
         transition: transform $duracion-transicion ease,
             box-shadow $duracion-transicion ease,
             background-color $duracion-transicion ease;
@@ -44,7 +48,7 @@ figure {
 
         &:hover {
             background-color: $color-card-hover;
-            transform: translateY(-5px);
+            @include elevar(5px);
             box-shadow: $sombra-hover;
         }
     }

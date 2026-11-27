@@ -3,15 +3,21 @@
 // Pie de página
 footer {
     padding: $espaciado-general 40px;
+    background-color: transparent;
+    border-top: 1px solid rgba($color-acento, 0.2);
+    color: $color-gris;
+    text-align: center;
+    font-size: 14px;
 
     a {
         color: $color-footer-enlace;
         text-decoration: none;
         transition: color $duracion-transicion ease,
-            text-decoration-color $duracion-transicion ease;
+            text-shadow $duracion-transicion ease;
 
         &:hover {
             color: $color-footer-hover;
+            text-shadow: 0 0 12px $color-acento;
             text-decoration: underline;
         }
 

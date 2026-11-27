@@ -11,13 +11,27 @@
 // Cuerpo de la página
 body {
     font-family: $fuente-principal;
-    background-color: $color-secundario;
-    color: $color-principal;
+
+    background-color: #080f1b;
+    background-image:
+        radial-gradient(ellipse at top left,
+            rgba(36, 137, 237, 0.28), transparent 45%),
+        radial-gradient(ellipse at bottom right,
+            rgba(0, 119, 255, 0.18), transparent 40%),
+        linear-gradient(135deg, #142b46, #0e1929, #080f1b);
+
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #f3f8ff;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 // Espaciado de secciones
 main {
+    flex: 1;
     padding: $espaciado-general;
 
     section {

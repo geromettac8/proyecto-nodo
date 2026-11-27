@@ -3,9 +3,10 @@
 
 // Encabezado
 .encabezado {
-    background-color: $color-principal;
-    color: $color-secundario;
+    background-color: transparent;
+    color: $color-blanco;
     padding: 10px $espaciado-general;
+    border-bottom: 1px solid rgba($color-acento, 0.2);
 
     @include desktop {
         flex-direction: row;

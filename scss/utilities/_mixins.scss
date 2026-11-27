@@ -28,3 +28,7 @@
     height: auto;
     margin: 0 auto;
 }
+// Efecto de elevación personalizado
+@mixin elevar($distancia: 5px) {
+    transform: translateY(-$distancia);
+}
